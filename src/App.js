@@ -9,41 +9,54 @@ function App() {
   let [firstNumber, setFirstNumber] = useState("0");
   let [secondNumber, setSecondNumber] = useState("0");
   let [operation, setOperation] = useState("+");
+  let [result, setResult] = useState("0");
 
   //first set of numbers
-  const firstOne = () => setFirstNumber((firstNumber = 1));
-  const firstTwo = () => setFirstNumber((firstNumber = 2));
-  const firstThree = () => setFirstNumber((firstNumber = 3));
-  const firstFour = () => setFirstNumber((firstNumber = 4));
-  const firstFive = () => setFirstNumber((firstNumber = 5));
-  const firstSix = () => setFirstNumber((firstNumber = 6));
-  const firstSeven = () => setFirstNumber((firstNumber = 7));
-  const firstEight = () => setFirstNumber((firstNumber = 8));
-  const firstNine = () => setFirstNumber((firstNumber = 9));
-  const firstZero = () => setFirstNumber((firstNumber = 0));
-  const firstClear = () => setFirstNumber((firstNumber = 0));
+  const firstOne = () => setFirstNumber(1);
+  const firstTwo = () => setFirstNumber(2);
+  const firstThree = () => setFirstNumber(3);
+  const firstFour = () => setFirstNumber(4);
+  const firstFive = () => setFirstNumber(5);
+  const firstSix = () => setFirstNumber(6);
+  const firstSeven = () => setFirstNumber(7);
+  const firstEight = () => setFirstNumber(8);
+  const firstNine = () => setFirstNumber(9);
+  const firstZero = () => setFirstNumber(0);
+  const firstClear = () => setFirstNumber(0);
 
   //second set of numbers
-  const one = () => setSecondNumber((secondNumber = 1));
-  const two = () => setSecondNumber((secondNumber = 2));
-  const three = () => setSecondNumber((secondNumber = 3));
-  const four = () => setSecondNumber((secondNumber = 4));
-  const five = () => setSecondNumber((secondNumber = 5));
-  const six = () => setSecondNumber((secondNumber = 6));
-  const seven = () => setSecondNumber((secondNumber = 7));
-  const eight = () => setSecondNumber((secondNumber = 8));
-  const nine = () => setSecondNumber((secondNumber = 9));
-  const zero = () => setSecondNumber((secondNumber = 0));
-  const clear = () => setSecondNumber((secondNumber = 0));
+  const one = () => setSecondNumber(1);
+  const two = () => setSecondNumber(2);
+  const three = () => setSecondNumber(3);
+  const four = () => setSecondNumber(4);
+  const five = () => setSecondNumber(5);
+  const six = () => setSecondNumber(6);
+  const seven = () => setSecondNumber(7);
+  const eight = () => setSecondNumber(8);
+  const nine = () => setSecondNumber(9);
+  const zero = () => setSecondNumber(0);
+  const clear = () => setSecondNumber(0);
 
   //set of operations
-  const additionOperator = () => setOperation((operation = "+"));
-  const subtractOperator = () => setOperation((operation = "-"));
-  const multiplyOperator = () => setOperation((operation = "*"));
-  const divideOperator = () => setOperation((operation = "÷"));
+  const additionOperator = () => setOperation("+");
+  const subtractOperator = () => setOperation("-");
+  const multiplyOperator = () => setOperation("*");
+  const divideOperator = () => setOperation("÷");
 
   //calculate result
-  const addResult = () => firstNumber + secondNumber;
+  let calculateResult = () => {
+    if (operation === "+") {
+      setResult(firstNumber + secondNumber);
+    } else if (operation === "-") {
+      setResult(firstNumber - secondNumber);
+    } else if (operation === "*") {
+      setResult(firstNumber * secondNumber);
+    } else {
+      if (operation === "÷") {
+        setResult(firstNumber / secondNumber);
+      }
+    }
+  };
 
   return (
     <div className="calculator">
@@ -91,9 +104,9 @@ function App() {
         </div>
       </div>
       <div className="panel answer">
-        <p>{addResult}</p>
+        <p>{result}</p>
         <div>
-          <button onClick={addResult}>=</button>
+          <button onClick={calculateResult}>=</button>
         </div>
       </div>
     </div>
