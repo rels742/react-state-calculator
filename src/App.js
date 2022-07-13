@@ -39,9 +39,18 @@ function App() {
   const multiplyOperator = () => setOperation("*");
   const divideOperator = () => setOperation("÷");
 
+  // a function with an if, else statement
   // if 0 is already being displayed
   // then when a new number is clicked that value will be replaced
   // else 0 will be appended onto whatever value is displaying when 0 is clicked
+
+  //const checkIfInitialNumberIs0 = () => {
+  //if(firstNumber === 0) {
+  //return something, not sure
+  //} else {
+
+  //}
+  //}
 
   //calculate result
   let calculateResult = () => {
