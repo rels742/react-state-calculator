@@ -53,6 +53,7 @@ function App() {
     } else {
       if (operation === "÷") {
         result = Number(firstNumber) / Number(secondNumber);
+        setResult(result);
       }
     }
   };
