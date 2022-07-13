@@ -12,7 +12,7 @@ function App() {
   let [result, setResult] = useState("0");
 
   //first set of numbers
-  const firstOne = () => setFirstNumber(1);
+  const firstOne = () => setFirstNumber(1 + "1");
   const firstTwo = () => setFirstNumber(2);
   const firstThree = () => setFirstNumber(3);
   const firstFour = () => setFirstNumber(4);
@@ -46,16 +46,21 @@ function App() {
   //calculate result
   let calculateResult = () => {
     if (operation === "+") {
-      setResult(firstNumber + secondNumber);
+      const result = Number(firstNumber) + Number(secondNumber);
+      setResult(result);
     } else if (operation === "-") {
-      setResult(firstNumber - secondNumber);
-    } else if (operation === "*") {
-      setResult(firstNumber * secondNumber);
-    } else {
-      if (operation === "÷") {
-        setResult(firstNumber / secondNumber);
-      }
     }
+    // if (operation === "+") {
+    //   setResult(firstNumber + secondNumber);
+    // } else if (operation === "-") {
+    //   setResult(firstNumber - secondNumber);
+    // } else if (operation === "*") {
+    //   setResult(firstNumber * secondNumber);
+    // } else {
+    //   if (operation === "÷") {
+    //     setResult(firstNumber / secondNumber);
+    //   }
+    // }
   };
 
   return (
