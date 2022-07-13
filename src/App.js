@@ -12,10 +12,10 @@ function App() {
   let [result, setResult] = useState("0");
 
   //first set of numbers
-  const firstOne = () => setFirstNumber(1 + "1");
-  const firstTwo = () => setFirstNumber(2);
-  const firstThree = () => setFirstNumber(3);
-  const firstFour = () => setFirstNumber(4);
+  const firstOne = () => setFirstNumber(firstNumber * 10 + 1);
+  const firstTwo = () => setFirstNumber(firstNumber * 10 + 2);
+  const firstThree = () => setFirstNumber(firstNumber * 10 + 3);
+  const firstFour = () => setFirstNumber(firstNumber * 10 + 4);
   const firstFive = () => setFirstNumber(5);
   const firstSix = () => setFirstNumber(6);
   const firstSeven = () => setFirstNumber(7);
