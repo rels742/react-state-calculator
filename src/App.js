@@ -17,7 +17,7 @@ function App() {
   const firstSeven = () => setFirstNumber(firstNumber + "7");
   const firstEight = () => setFirstNumber(firstNumber + "8");
   const firstNine = () => setFirstNumber(firstNumber + "9");
-  const firstZero = () => setFirstNumber(firstNumber + "0");
+  let firstZero = () => setFirstNumber(firstNumber + "0");
   const firstClear = () => setFirstNumber("");
 
   //second set of numbers
@@ -38,6 +38,10 @@ function App() {
   const subtractOperator = () => setOperation("-");
   const multiplyOperator = () => setOperation("*");
   const divideOperator = () => setOperation("÷");
+
+  // if 0 is already being displayed
+  // then when a new number is clicked that value will be replaced
+  // else 0 will be appended onto whatever value is displaying when 0 is clicked
 
   //calculate result
   let calculateResult = () => {
